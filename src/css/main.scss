@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@layer base {
+}
+
+@import "tailwindcss/components";
+@layer components {
+  @import "@/css/snippets/site-logo.scss";
+  @import "@/css/sections/header.scss";
+}
+
+@import "tailwindcss/utilities";
+@layer utilities {
+}

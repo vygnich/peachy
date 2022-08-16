@@ -1,0 +1,38 @@
+<header data-section-type="header" data-section-id="{{ section.id }}">
+  <div class="relative bg-white">
+    <div class="mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10 gap-x-5">
+        <div class="flex justify-start lg:w-0 lg:flex-1">
+          {% render 'logo' %}
+        </div>
+        <div class="flex items-center justify-end md:flex-1 lg:w-0">
+          <p>
+            Items:
+            <strong data-cart-render="item_count"></strong>
+            Total:
+            <strong data-cart-render="total_price_money_with_currency"></strong>
+          </p>
+          <button
+            class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+            data-cart-clear
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="swiper bg-indigo-600 text-white text-center">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+  {
+    "name": "Header"
+  }
+{% endschema %}
