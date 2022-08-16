@@ -4,7 +4,7 @@
 Implement functionality according to design (link in Sources). You can use provided theme or any other theme/scratch project.
 ### Goals:
  1. Products/variants should be added to cart by clicking the `add to cart` button;
- 2. Changing the `product variant (select dropdown)` should correctly change the `variant added to the cart`;
+ 2. Changing the `product variant (select dropdown)` should correctly change the `variant that will be added to the cart`;
  3. Product cards should be a `carousel on mobile` and a `grid on desktop`;
  4. Product `Image` and `Title` should redirect to PDP (Product Details Page);
 ## Docs
