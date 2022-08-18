@@ -6,6 +6,8 @@ import "swiper/css/autoplay";
 const Header = {
   onLoad() {
     this._init();
+    this._initCartToggle();
+    // this._showHelper();
   },
 
   _init() {
@@ -17,6 +19,24 @@ const Header = {
       autoplay: true,
       modules: [Autoplay],
     });
+  },
+
+  _initCartToggle() {
+    this.cartToggle = this.container.querySelector("[data-cart-open-close]");
+    this.cartBody = this.container.querySelector("[data-cart-view]");
+
+    if (!this.cartToggle || !this.cartBody) return;
+
+    this.cartToggle.addEventListener("click", () => {
+      this.cartBody.classList.toggle("active");
+    });
+  },
+
+  _showHelper() {
+    this.media = window.matchMedia(Shopify.theme.media.md);
+    this.media.addEventListener("change", (ev) =>
+      ev.matches ? console.log("Desktop") : console.log("Mobile")
+    );
   },
 };
 
