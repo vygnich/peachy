@@ -9,7 +9,7 @@ Implement functionality according to design (link in Sources). You can use provi
 1.  Products/variants should be added to cart by clicking the `add to cart` button (check CartJS docs);
 2.  Changing the `product variant (select dropdown)` should correctly change the `variant that will be added to the cart` (check CartJS docs);
 3.  Product cards should be `carousel on mobile` and `grid on desktop` and automatically change to `carousel view` or `grid view` depending on screen resolution;
-4.  Clicking the Product Image or Product Title should redirect to Product Details Page (no need to implement this page);
+4.  Clicking the `Product Image` and `Product Title` should redirect to `Product Details Page` (no need to implement this page);
 
 ## Docs
 
