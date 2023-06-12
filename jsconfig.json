@@ -6,8 +6,5 @@
       "@shopify-directory/*": ["./shopify/*"]
     }
   },
-  "exclude": ["node_modules"],
-  "vueCompilerOptions": {
-    "experimentalDisableTemplateSupport": true
-  }
+  "exclude": ["node_modules"]
 }

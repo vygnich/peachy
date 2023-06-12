@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link rel="preload" href="{{ 'bundle.css' | asset_url }}" as="style">
-    <link rel="preload" href="{{ 'bundle.js' | asset_url }}" as="script">
+    {{ 'bundle.js' | asset_url | preload_tag: as: 'script' }}
 
     <title>{{ page_title | escape }}</title>
 
@@ -26,10 +25,12 @@
     <script src="{{ 'jquery-3.6.0.min.static.js' | asset_url }}"></script>
     {% comment %}theme-check-enable ParserBlockingJavaScript{% endcomment %}
     <script src="{{ 'rivets-cart.min.static.js' | asset_url }}" defer></script>
-    <script src="{{ 'option_selection.js' | shopify_asset_url }}" defer>
-    </script>
+    <script
+      src="{{ 'option_selection.js' | shopify_asset_url }}"
+      defer
+    ></script>
 
-    {{ 'bundle.css' | asset_url | stylesheet_tag }}
+    {{ 'bundle.css' | asset_url | stylesheet_tag: preload: true }}
     {{ content_for_header }}
 
     <script>

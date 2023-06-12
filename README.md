@@ -1,23 +1,33 @@
 # peachy-candidate
 
 ## Task
+
 Implement functionality according to design (link in Sources). You can use provided theme or any other theme/scratch project.
+
 ### Goals:
- 1. Products/variants should be added to cart by clicking the `add to cart` button;
- 2. Changing the `product variant (select dropdown)` should correctly change the `variant that will be added to the cart`;
- 3. Product cards should be a `carousel on mobile` and a `grid on desktop`;
- 4. Clicking the Product Image or Product Title should redirect to PDP (Product Details Page);
+
+1.  Products/variants should be added to cart by clicking the `add to cart` button (check CartJS docs);
+2.  Changing the `product variant (select dropdown)` should correctly change the `variant that will be added to the cart` (check CartJS docs);
+3.  Product cards should be `carousel on mobile` and `grid on desktop` and automatically change to `carousel view` or `grid view` depending on screen resolution;
+4.  Clicking the Product Image or Product Title should redirect to Product Details Page (no need to implement this page);
+
 ## Docs
+
 Shopify CLI: https://shopify.dev/themes/tools/cli
 CartJS: https://cartjs.org
+
 ## Setup steps
- 1. Login into your development store `shopify login --store=YOUR_STORE_URL`;
- 2. Use `shopify populate` [command](https://shopify.dev/themes/tools/cli/core-commands#populate) if you need to create products or add them manually.
- 3. Install node modules `yarn install`;
- 4. Start Development `yarn start`.
+
+1.  Install node modules `yarn install`;
+2.  Update `shopify.theme.toml` (replace `store = ""` with your's store address, e.g `store = "my-store"`);
+3.  Start Development `yarn start`.
+
 ## Note
- - You have everything you need in the provided theme to develop this page
- - Use `src` folder for your `css (scss)` and `js`;
- - Use `tailwind` or `css (scss)`;
+
+- You have everything you need in the provided theme to develop this page
+- Use `src` folder for your `css (scss)` and `js`;
+- `Tailwind` is optional but will be a plus;
+
 ## Sources
- - Design - https://www.figma.com/file/BB5Ge3zMwyOt1CZ3FuWQaZ/peachy-candidate
+
+- Design - https://www.figma.com/file/BB5Ge3zMwyOt1CZ3FuWQaZ/peachy-candidate
