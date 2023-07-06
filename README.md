@@ -13,8 +13,8 @@ Implement functionality according to design (link in Sources). You can use provi
 
 ## Docs
 
-Shopify CLI: https://shopify.dev/themes/tools/cli
-CartJS: https://cartjs.org
+Shopify CLI: https://shopify.dev/docs/themes/tools/cli/install
+CartJS: https://cartjs.org/pages/guide#data-api-submitting-forms
 
 ## Setup steps
 
