@@ -199,5 +199,5 @@ DeprecatedGlobalAppBlockType:
 
 SchemaJsonFormat:
   enabled: true
-  start_level: 0
+  start_level: 1
   indent: "  "

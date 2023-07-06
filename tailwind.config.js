@@ -6,6 +6,11 @@ module.exports = {
       center: true,
       padding: "1rem",
     },
+    extend: {
+      fontFamily: {
+        "adorn-condensed-sans": ["Adorn Condensed Sans", "sans-serif"],
+      },
+    },
   },
 
   plugins: [],
