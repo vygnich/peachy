@@ -23,7 +23,7 @@ CartJS: https://cartjs.org/pages/guide#data-api-submitting-forms
 3.  Start Development `yarn start`.
 
 ## Note
-
+- Use latest version of Shopify CLI
 - You have everything you need in the provided theme to develop this page
 - Use `src` folder for your `css (scss)` and `js`;
 - `Tailwind` is optional but will be a plus;
