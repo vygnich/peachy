@@ -20,7 +20,9 @@ CartJS: https://cartjs.org/pages/guide#data-api-submitting-forms
 
 1.  Install node modules `yarn install`;
 2.  Update `shopify.theme.toml` (replace `store = ""` with your's store address, e.g `store = "my-store"`);
-3.  Start Development `yarn start`.
+3.  Start Development `yarn start`;
+4.  Code the task;
+5.  Deploy `yarn deploy`.
 
 ## Note
 - Use latest version of Shopify CLI
