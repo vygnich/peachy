@@ -7,14 +7,13 @@ const Header = {
   onLoad() {
     this._init();
     this._initCartToggle();
-    // this._showHelper();
   },
 
   _init() {
     this.sliderWrapper = this.container.querySelector(".swiper");
     if (!this.sliderWrapper) return;
 
-    this.slider = new Swiper(this.sliderWrapper, {
+    new Swiper(this.sliderWrapper, {
       slidesPerView: 1,
       autoplay: true,
       modules: [Autoplay],

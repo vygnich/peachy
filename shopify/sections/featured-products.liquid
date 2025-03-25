@@ -1,25 +1,72 @@
-<div
-  data-section-type="featured-products"
-  data-section-id="{{ section.id }}"
->
-  <!-- Slider main container -->
-  <div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+{% liquid
+  assign title = section.settings.title
+  assign collection = section.settings.collection
+  assign background_image = section.settings.background_image
+  assign background_image_mobile = section.settings.background_image_mobile
+%}
+
+{% unless collection == blank %}
+  {% capture style_variables %}
+    {% unless background_image == blank %}
+      --background-image: url('{{ background_image | img_url: 'master' }}');
+    {% endunless %}
+    {% unless background_image_mobile == blank %}
+      --background-image-mobile: url('{{ background_image_mobile | img_url: 'master' }}');
+    {% endunless %}
+  {% endcapture %}
+  <div
+    data-section-type="featured-products"
+    data-section-id="{{ section.id }}"
+    {% unless background_image == blank %}
+      style="{{ style_variables }}"
+    {% endunless %}
+  >
+    <div class="container">
+      {% if title %}
+        <h2 class="h2 text-center">
+          {{ title }}
+        </h2>
+      {% endif %}
+      <div class="swiper">
+        <div class="swiper-wrapper featured-products__grid">
+          {% for product in collection.products %}
+            {% render 'product-grid-item', product: product, class: 'swiper-slide' %}
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
   </div>
-</div>
+{% endunless %}
 
 {% schema %}
   {
     "name": "Featured Products",
     "tag": "section",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Title",
+        "default": "Our best sellers",
+        "info": "Italic text will be highlighted on mobile"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image_mobile",
+        "label": "Background image(mobile)"
+      }
+    ],
     "presets": [
       {
         "name": "Featured Products"

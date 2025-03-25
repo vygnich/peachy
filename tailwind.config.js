@@ -5,6 +5,9 @@ module.exports = {
     container: {
       center: true,
       padding: "1rem",
+      screens: {
+        sm: "1400px",
+      },
     },
     extend: {
       fontFamily: {
